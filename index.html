@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WideVAR: Wide Image and Video Generation</title>
+    <meta
+      name="description"
+      content="Project page for WideVAR."
+    >
+    <link rel="stylesheet" href="styles.css?v=maincover-19">
+  </head>
+  <body>
+    <main id="top">
+      <section class="hero section">
+        <div class="hero-copy">
+          <h1>WideVAR: Wide Image and Video Generation in Visual Autoregressive Models</h1>
+          <div class="publication-authors" aria-label="authors">
+            <span class="author-block">Kyujin Lim<sup>1</sup>,</span>
+            <span class="author-block">Jaeyun Jung<sup>1</sup>,</span>
+            <span class="author-block">Jaesik Park<sup>1</sup>,</span>
+            <span class="author-block">Bohyung Han<sup>1</sup></span>
+          </div>
+          <div class="publication-affiliations" aria-label="affiliations">
+            <span class="author-block"><sup>1</sup>Seoul National University</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="main-cover section" aria-label="WideVAR teaser examples">
+        <article class="cover-panel">
+          <h2 class="cover-panel-title">Wide Image Generation</h2>
+          <div class="cover-image-stack">
+            <figure class="prompted-media">
+              <img src="assets/real_fig/maincover/image_1.png" alt="A snowy village panorama under aurora lights.">
+              <figcaption class="prompt-caption">&ldquo;A small snowy mountain village with a clocktower, bright aurora curtains above the roofs...&rdquo;</figcaption>
+            </figure>
+            <figure class="prompted-media">
+              <img src="assets/real_fig/maincover/image_2.png" alt="A wide ocean panorama viewed through weathered pillars.">
+              <figcaption class="prompt-caption">&ldquo;The vast expanse of the sea from the perspective of an aged, abandoned building...&rdquo;</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="cover-panel">
+          <h2 class="cover-panel-title">Wide Video Generation</h2>
+          <div class="cover-video-stack">
+            <figure class="prompted-media">
+              <div class="film-frame" data-label="T2V">
+                <video controls playsinline preload="metadata">
+                  <source src="assets/real_fig/maincover/video1.mp4" type="video/mp4">
+                </video>
+              </div>
+              <figcaption class="prompt-caption">&ldquo;A riverside festival with glowing lanterns floating on the water, fireworks bursting overhead... Camera static.&rdquo;</figcaption>
+            </figure>
+            <figure class="prompted-media">
+              <div class="film-frame" data-label="I2V">
+                <video controls playsinline preload="metadata">
+                  <source src="assets/real_fig/maincover/video2.mp4" type="video/mp4">
+                </video>
+              </div>
+              <figcaption class="prompt-caption">&ldquo;A large wave crashes over a rocky cliff... Camera static.&rdquo;</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="cover-panel">
+          <h2 class="cover-panel-title">Object Motion Control in Wide Video</h2>
+          <div class="cover-video-stack">
+            <figure class="film-frame">
+              <video controls playsinline preload="metadata">
+                <source src="assets/real_fig/maincover/video3.mp4" type="video/mp4">
+              </video>
+            </figure>
+            <figure class="film-frame">
+              <video controls playsinline preload="metadata">
+                <source src="assets/real_fig/maincover/video4.mp4" type="video/mp4">
+              </video>
+            </figure>
+          </div>
+        </article>
+      </section>
+
+      <section class="image-qual section" aria-label="Wide image qualitative results">
+        <h2>Wide Image Qualitative Results</h2>
+        <div class="image-qual-list">
+          <p class="prompt-caption group-prompt">&ldquo;A farm scene with cows, ducks and a tractor&rdquo;</p>
+          <article class="image-qual-row">
+            <img src="assets/real_fig/image_qual/imageresult_1.png" alt="Wide image qualitative result from Tiling Flux.">
+            <h3>Tiling Flux</h3>
+          </article>
+          <article class="image-qual-row">
+            <img src="assets/real_fig/image_qual/imageresult_2.png" alt="Wide image qualitative result from SyncDiffusion.">
+            <h3>SyncDiffusion</h3>
+          </article>
+          <article class="image-qual-row">
+            <img src="assets/real_fig/image_qual/imageresult_3.png" alt="Wide image qualitative result from Ours Infinity-Star.">
+            <h3>Ours Infinity-Star</h3>
+          </article>
+          <article class="image-qual-row">
+            <img src="assets/real_fig/image_qual/imageresult_4.png" alt="Wide image qualitative result from Ours Flux.">
+            <h3>Ours Flux</h3>
+          </article>
+        </div>
+      </section>
+
+      <section class="video-qual section" aria-label="Wide video qualitative results">
+        <h2>Wide Video Qualitative Results</h2>
+        <div class="video-qual-group">
+          <p class="prompt-caption group-prompt">&ldquo;In a beautifully rendered papercraft world, a steamboat travels across a vast ocean with wispy clouds... Camera static.&rdquo;</p>
+          <article class="video-qual-row">
+            <video controls playsinline preload="metadata">
+              <source src="assets/real_fig/video_qual/videoqual_1.mp4" type="video/mp4">
+            </video>
+            <h3>Tiling CogVideoX</h3>
+            <p class="quality-note">Spatial coherence 😡 Camera motion 😡</p>
+          </article>
+          <article class="video-qual-row">
+            <video controls playsinline preload="metadata">
+              <source src="assets/real_fig/video_qual/videoqual_2.mp4" type="video/mp4">
+            </video>
+            <h3>DynamicScaler</h3>
+            <p class="quality-note">Camera motion 😡</p>
+          </article>
+          <article class="video-qual-row">
+            <video controls playsinline preload="metadata">
+              <source src="assets/real_fig/video_qual/videoqual_3.mp4" type="video/mp4">
+            </video>
+            <h3>Ours</h3>
+            <p class="quality-note">Spatial Coherence 😄 Camera motion 😄</p>
+          </article>
+        </div>
+        <div class="video-qual-group">
+          <p class="prompt-caption group-prompt">&ldquo;Flying cars zoom through a futuristic cityscape, maneuvering around towering skyscrapers... Camera static.&rdquo;</p>
+          <article class="video-qual-row">
+            <video controls playsinline preload="metadata">
+              <source src="assets/real_fig/video_qual/videoqual4.mp4" type="video/mp4">
+            </video>
+            <h3>Tiling CogVideoX</h3>
+            <p class="quality-note">Spatial Coherence 😡 Camera motion 😡</p>
+          </article>
+          <article class="video-qual-row">
+            <video controls playsinline preload="metadata">
+              <source src="assets/real_fig/video_qual/videoqual_5.mp4" type="video/mp4">
+            </video>
+            <h3>DynamicScaler</h3>
+            <p class="quality-note">Spatial Coherence 😡 Camera motion 😡</p>
+          </article>
+          <article class="video-qual-row">
+            <video controls playsinline preload="metadata">
+              <source src="assets/real_fig/video_qual/videoqual_6.mp4" type="video/mp4">
+            </video>
+            <h3>Ours</h3>
+            <p class="quality-note">Spatial Coherence 😄 Camera motion 😄</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="ablation section" aria-label="Singular-Value Reweighting ablation">
+        <h2>Singular-Value Reweighting Ablation</h2>
+        <div class="ablation-group">
+          <p class="prompt-caption group-prompt no-wrap-prompt">&ldquo;Autumn leaves falling through a wide forest clearing, red and gold foliage drifting down in endless flurries... Camera static.&rdquo;</p>
+          <article class="ablation-row">
+            <video controls playsinline preload="metadata">
+              <source src="assets/real_fig/ablation/videoabl1.mp4" type="video/mp4">
+            </video>
+            <h3>w/o SVR</h3>
+            <p class="quality-note">Flickering 😡</p>
+          </article>
+          <article class="ablation-row">
+            <video controls playsinline preload="metadata">
+              <source src="assets/real_fig/ablation/videoabl2.mp4" type="video/mp4">
+            </video>
+            <h3>w/ SVR &alpha;=0.1</h3>
+            <p class="quality-note">Low dynamic 😡</p>
+          </article>
+          <article class="ablation-row">
+            <video controls playsinline preload="metadata">
+              <source src="assets/real_fig/ablation/videoabl3.mp4" type="video/mp4">
+            </video>
+            <h3>w/ SVR &alpha;=1.0</h3>
+            <p class="quality-note">Flickering (initial frames) 😡</p>
+          </article>
+          <article class="ablation-row">
+            <video controls playsinline preload="metadata">
+              <source src="assets/real_fig/ablation/videoabl4.mp4" type="video/mp4">
+            </video>
+            <h3>Ours w/ SVR &alpha;=0.4</h3>
+            <p class="quality-note">No flickering 😄, Seamless dynamic 😄</p>
+          </article>
+        </div>
+        <div class="ablation-group">
+          <p class="prompt-caption group-prompt">&ldquo;Elegantly dressed dancers glide across the polished floor of a grand ballroom... Camera static.&rdquo;</p>
+          <article class="ablation-row">
+            <video controls playsinline preload="metadata">
+              <source src="assets/real_fig/ablation/videoabl5.mp4" type="video/mp4">
+            </video>
+            <h3>w/o SVR</h3>
+            <p class="quality-note">Camera motion 😡 Flickering (late frames) 😡</p>
+          </article>
+          <article class="ablation-row">
+            <video controls playsinline preload="metadata">
+              <source src="assets/real_fig/ablation/videoabl6.mp4" type="video/mp4">
+            </video>
+            <h3>w/ SVR &alpha;=0.1</h3>
+            <p class="quality-note">Low dynamic 😡</p>
+          </article>
+          <article class="ablation-row">
+            <video controls playsinline preload="metadata">
+              <source src="assets/real_fig/ablation/videoabl7.mp4" type="video/mp4">
+            </video>
+            <h3>w/ SVR &alpha;=1.0</h3>
+            <p class="quality-note">Camera motion 😡</p>
+          </article>
+          <article class="ablation-row">
+            <video controls playsinline preload="metadata">
+              <source src="assets/real_fig/ablation/videoabl8.mp4" type="video/mp4">
+            </video>
+            <h3>Ours w/ SVR &alpha;=0.4</h3>
+            <p class="quality-note">No camera motion 😄 Seamless dynamic 😄</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="tf-ablation section" aria-label="Teacher-Forcing stage ablation">
+        <h2>Teacher-Forcing Stage Ablation</h2>
+        <div class="tf-ablation-list">
+          <article class="tf-ablation-row">
+            <div class="tf-ablation-videos">
+              <video controls playsinline preload="metadata">
+                <source src="assets/real_fig/ablation_tf/motion11.mp4" type="video/mp4">
+              </video>
+              <video controls playsinline preload="metadata">
+                <source src="assets/real_fig/ablation_tf/motion12.mp4" type="video/mp4">
+              </video>
+            </div>
+            <h3>Naive Trajectory Video</h3>
+          </article>
+          <article class="tf-ablation-row">
+            <div class="tf-ablation-videos">
+              <video controls playsinline preload="metadata">
+                <source src="assets/real_fig/ablation_tf/motion21.mp4" type="video/mp4">
+              </video>
+              <video controls playsinline preload="metadata">
+                <source src="assets/real_fig/ablation_tf/motion22.mp4" type="video/mp4">
+              </video>
+            </div>
+            <h3>TF 3 out of 15</h3>
+            <p class="quality-note">Inaccurate trajectory and size 😡</p>
+          </article>
+          <article class="tf-ablation-row">
+            <div class="tf-ablation-videos">
+              <video controls playsinline preload="metadata">
+                <source src="assets/real_fig/ablation_tf/motion31.mp4" type="video/mp4">
+              </video>
+              <video controls playsinline preload="metadata">
+                <source src="assets/real_fig/ablation_tf/motion33.mp4" type="video/mp4">
+              </video>
+            </div>
+            <h3>TF 9 out of 15</h3>
+            <p class="quality-note">Rigid and unnature motion 😡</p>
+          </article>
+          <article class="tf-ablation-row">
+            <div class="tf-ablation-videos">
+              <video controls playsinline preload="metadata">
+                <source src="assets/real_fig/ablation_tf/motion41.mp4" type="video/mp4">
+              </video>
+              <video controls playsinline preload="metadata">
+                <source src="assets/real_fig/ablation_tf/motion42.mp4" type="video/mp4">
+              </video>
+            </div>
+            <h3>Ours TF 6 out of 15</h3>
+            <p class="quality-note">accurate trajectory and size 😄 nature motion 😄</p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
